@@ -1,12 +1,21 @@
-import heroImg01 from '../assets/images/hero-img01.png';
-import heroImg02 from '../assets/images/hero-img02.png';
-import heroImg03 from '../assets/images/hero-img03.png';
+
+import { Link } from 'react-router-dom';
+import { BiSolidChevronRight } from 'react-icons/bi';
+// import heroImg01 from '../assets/images/hero-img01.png';
+// import heroImg02 from '../assets/images/hero-img02.png';
+// import heroImg03 from '../assets/images/hero-img03.png';
+import heroImg01 from '../assets/images/hs1.png';
+import heroImg02 from '../assets/images/hs2.png';
+import heroImg03 from '../assets/images/hs3.png';
+import icon01 from '../assets/images/icon01.png';
+import icon02 from '../assets/images/icon02.png';
+import icon03 from '../assets/images/icon03.png';
+
 
 const Home = () => {
   return (
     <>
-    {/* ===== hero section ===== */}
-      <>
+    {/* ===== hero section starts ===== */}
         <section className="hero__section pt-[60px] 2xl:h-[800px]">
           <div className="container">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-[5.8rem]">
@@ -51,7 +60,68 @@ const Home = () => {
             </div>
           </div>
         </section>
-      </>
+      {/* ===== hero section ends ===== */}
+
+      {/* ===== about section ===== */}
+      <section>
+        <div className="container">
+          <div className="lg:w-[470px] mx-auto">
+            <h2 className='heading text-center'>Providing The Best Medical Care</h2>
+            <p className='text__para text-center'>World-class dental care, right around the corner.<br/>Our health system offers unmatched, expert health care.</p>
+          </div>
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-[30px] mt-[60px] mb-[30px]lg:mt-[55px]'>
+            <div className='py-[30px] px-5'>
+              <div className='flex items-center justify-center'>
+                <img className='' src={icon01} alt="icon01" />
+              </div>
+
+              <div className='mt-[30px]'>
+                <h3 className='text-[26px] leading-9 text-headingColor font-[700] text-center'>Find a Doctor</h3>
+                <p className='text__para text-[16px] leading-7 text-textColor font-[400] mt-4 text-center'>World-class care for everyone. Our health System offers unmatched, expert health care. From the lab to the clinic.</p>
+
+                <Link to='/doctors' className='w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E] mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none'>
+                    <BiSolidChevronRight className='group-hover:text-white w-6 h-5'/>
+                </Link>
+              </div>
+              
+            </div>
+
+            <div className='py-[30px] px-5'>
+              <div className='flex items-center justify-center'>
+                <img className='' src={icon02} alt="icon02" />
+              </div>
+
+              <div className='mt-[30px]'>
+                <h3 className='text-[26px] leading-9 text-headingColor font-[700] text-center'>Find a Location</h3>
+                <p className='text__para text-[16px] leading-7 text-textColor font-[400] mt-4 text-center'>World-class care for everyone. Our health System offers unmatched, expert health care. From the lab to the clinic.</p>
+
+                <Link to='/doctors' className='w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E] mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none'>
+                    <BiSolidChevronRight className='group-hover:text-white w-6 h-5'/>
+                </Link>
+              </div>
+
+            </div>
+
+            <div className='py-[30px] px-5'>
+              <div className='flex items-center justify-center'>
+                <img className='' src={icon03} alt="icon03" />
+              </div>
+
+              <div className='mt-[30px]'>
+                <h3 className='text-[26px] leading-9 text-headingColor font-[700] text-center'>Book Appointment</h3>
+                <p className='text__para text-[16px] leading-7 text-textColor font-[400] mt-4 text-center'>World-class care for everyone. Our health System offers unmatched, expert health care. From the lab to the clinic.</p>
+
+                <Link to='/doctors' className='w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E] mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none'>
+                    <BiSolidChevronRight className='group-hover:text-white w-6 h-5'/>
+                </Link>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
     </>
   )
 }
