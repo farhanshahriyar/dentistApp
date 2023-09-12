@@ -11,6 +11,7 @@ import icon01 from '../assets/images/icon01.png';
 import icon02 from '../assets/images/icon02.png';
 import icon03 from '../assets/images/icon03.png';
 import About from '../components/About/About';
+import Services from '../components/Services/Services';
 
 
 const Home = () => {
@@ -127,6 +128,11 @@ const Home = () => {
       {/* ===== about section ===== */}
       <About/>
       {/* ===== about section ends ===== */}
+
+      {/* ===== services section ===== */}
+      <Services/>
+      {/* ===== services section ends ===== */}
+     
     </>
   )
 }
