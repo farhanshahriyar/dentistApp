@@ -10,6 +10,7 @@ import heroImg03 from '../assets/images/hs3.png';
 import icon01 from '../assets/images/icon01.png';
 import icon02 from '../assets/images/icon02.png';
 import icon03 from '../assets/images/icon03.png';
+import About from '../components/About/About';
 
 
 const Home = () => {
@@ -62,7 +63,7 @@ const Home = () => {
         </section>
       {/* ===== hero section ends ===== */}
 
-      {/* ===== about section ===== */}
+      {/* ===== home section ===== */}
       <section>
         <div className="container">
           <div className="lg:w-[470px] mx-auto">
@@ -121,7 +122,11 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* ===== home section ends ===== */}
 
+      {/* ===== about section ===== */}
+      <About/>
+      {/* ===== about section ends ===== */}
     </>
   )
 }
