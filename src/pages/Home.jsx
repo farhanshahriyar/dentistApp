@@ -13,6 +13,7 @@ import icon03 from '../assets/images/icon03.png';
 import About from '../components/About/About';
 import Services from '../components/Services/Services';
 import Featured from '../components/Featured/Featured';
+import DoctorList from '../components/Doctors/DoctorList';
 
 
 const Home = () => {
@@ -137,7 +138,19 @@ const Home = () => {
       {/* ===== featured section ===== */}
       <Featured/>
       {/* ===== featured section ends ===== */}
+      <section>
+        <div className="container">
+          <div className="xl:w-[470px] mx-auto">
+            <h2 className="heading text-center">Our great doctors</h2>
+            <p className="text__para text-center">World-class dental care, right around the corner.<br/>Our health system offers unmatched, expert health care.
+            </p>
+          </div>
+          <DoctorList/>
+        </div>
+      </section>
+      {/* ===== great doctors section ===== */}
      
+
     </>
   )
 }
