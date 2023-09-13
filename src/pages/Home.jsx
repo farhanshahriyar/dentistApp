@@ -12,6 +12,7 @@ import icon02 from '../assets/images/icon02.png';
 import icon03 from '../assets/images/icon03.png';
 import About from '../components/About/About';
 import Services from '../components/Services/Services';
+import Featured from '../components/Featured/Featured';
 
 
 const Home = () => {
@@ -132,6 +133,10 @@ const Home = () => {
       {/* ===== services section ===== */}
       <Services/>
       {/* ===== services section ends ===== */}
+
+      {/* ===== featured section ===== */}
+      <Featured/>
+      {/* ===== featured section ends ===== */}
      
     </>
   )
