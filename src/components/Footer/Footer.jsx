@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../../assets/images/logo.png'
-import { RiLinkedinFill, RiTwitterFill, RiFacebookFill, RiInstagramFill } from 'react-icons/ri'
+// import { RiLinkedinFill, RiTwitterFill, RiFacebookFill, RiInstagramFill } from 'react-icons/ri'
 import { AiFillYoutube, AiFillGithub, AiOutlineInstagram, AiFillFacebook } from 'react-icons/ai'
 
 
@@ -74,14 +74,14 @@ const quickLinks03 = [
 ];
 
 const Footer = () => {
-  const year = new Date().getFullYear()
+  const year = new Date().getFullYear() // get current year
   return (
     <footer className='pb-16 pt-10'>
       <div className='container'>
         <div className='flex justify-between flex-col md:flex-row flex-wrap gap-[30px]'>
           <div>
             <img src={logo} alt='logo' />
-            <p className='text-[16px] leading-7 text-textColor font-[400] mt-4'>Copyright {year} developed by Medicare all right reserved.</p>
+            <p className='text-[16px] leading-7 text-textColor font-[400] mt-4'>Copyright {year} developed by MedicareIT developers all right reserved.</p>
 
             <div className='flex items-center gap-5 mt-5'>
               {socialLinks.map((item, index) => (
