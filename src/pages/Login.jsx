@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { FaGooglePlusG } from 'react-icons/fa'
 
 const Login = () => {
 
@@ -33,6 +34,9 @@ const Login = () => {
 
               <div className='mt-5'>
                 <button type='submit' className='w-full text-[18px] leading-8 bg-primaryColor text-white rounded-lg px-4 py-3 font-bold mt-8'>Login</button>
+              </div>
+              <div className='mt-1'>
+                <button type='submit' className='w-full text-[18px] leading-8 bg-primaryColor text-white rounded-lg px-4 py-3 font-bold mt-8'><FaGooglePlusG className='w-full'/>Login with Google </button>
               </div>
 
               <p className='mt-5 text-textColor text-center'>
