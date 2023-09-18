@@ -52,7 +52,9 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* ===== logo ===== */}
           <div className="">
-            <img src={logo} alt="dentist logo" />
+            <Link to="/">
+            <img src={logo} alt="medicare logo" />
+            </Link>
           </div>
 
           {/* ===== menu ===== */}
