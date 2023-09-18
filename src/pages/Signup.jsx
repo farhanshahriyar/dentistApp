@@ -28,7 +28,9 @@ const Signup = () => {
 
     const handleFileInputChange = async (event) => {
       const file = event.target.files[0];
-      console.log(file)
+
+      // later we will add cloudinary to upload images
+      // console.log(file)  // works file
     }
 
     const submitHandler = async event => {
@@ -48,7 +50,7 @@ const Signup = () => {
           {/* === form box === */}
           <div className='rounded-r-lg lg:pl-16 py-10'>
             <h3 className='text-headingColor text-[22px] leading-9 font-bold mb-10'>Create an <span className='text-primaryColor'>account</span></h3>
-            
+
             <form onSubmit={submitHandler}>
               <div className="mb-5">
                 <input type="text" name='text' value={FormData.name} onChange={handleInpurChange}
