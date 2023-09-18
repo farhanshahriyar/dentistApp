@@ -66,7 +66,7 @@ const Signup = () => {
               </div>
 
                <div className='mt-1'>
-                <button type='submit' className='w-full text-[18px] leading-8 bg-primaryColor text-white rounded-lg px-4 py-3 font-bold mt-8'><FaGooglePlusG className='w-full'/>Register with Google</button>
+                <button type='submit' className='w-full flex items-center justify-center text-[18px] leading-8 bg-primaryColor text-white rounded-lg px-4 py-3 font-bold mt-8'><FaGooglePlusG className='mr-2 text-2xl'/>Register with Google</button>
               </div>
               <p className='mt-5 text-textColor text-center'>
                 Already have an account? {" "} <Link to='/login' className='text-primaryColor font-medium ml-1 cursor-pointer'>Login</Link>

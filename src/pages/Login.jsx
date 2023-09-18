@@ -35,9 +35,21 @@ const Login = () => {
               <div className='mt-5'>
                 <button type='submit' className='w-full text-[18px] leading-8 bg-primaryColor text-white rounded-lg px-4 py-3 font-bold mt-8'>Login</button>
               </div>
-              <div className='mt-1'>
+              {/* <div className='mt-1'>
                 <button type='submit' className='w-full text-[18px] leading-8 bg-primaryColor text-white rounded-lg px-4 py-3 font-bold mt-8'><FaGooglePlusG className='w-full'/>Login with Google </button>
+              </div> */}
+
+              <div className="mt-1">
+                <button
+                  type="submit"
+                  className="w-full flex items-center justify-center text-18 bg-primaryColor text-white rounded-lg px-4 py-3 font-bold mt-8"
+                >
+                  <FaGooglePlusG className="mr-2 text-2xl" />
+                  Login with Google
+                </button>
               </div>
+
+
 
               <p className='mt-5 text-textColor text-center'>
                 Don&apos;t have an account? {" "} <Link to='/register' className='text-primaryColor font-medium ml-1 cursor-pointer'>Register</Link>
