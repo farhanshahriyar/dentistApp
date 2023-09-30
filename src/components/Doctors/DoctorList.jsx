@@ -1,12 +1,23 @@
-import { doctors } from './../../assets/data/doctors'
-import DoctorCard from './DoctorCard'
+import { useState, useEffect } from 'react';
+// import { doctors } from './../../assets/data/doctors';
+import DoctorCard from './DoctorCard';
+import useAxios from '../../hooks/useAxios';
 
 const DoctorList = () => {
+  const [doctors, setDoctors] = useState([]);
+  const axiosInstance = useAxios();
+  useEffect(() => {
+    (async function () {
+      const { data } = await axiosInstance.get('/reserverd');
+      setDoctors(data);
+    })();
+  }, []);
+
   return (
     <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 lg:gap-[30px] mt-[30px] lg:mt-[55px]'>
-        {doctors.map((doctor) => <DoctorCard key={doctor.id} doctor={doctor}/>)}
+      {doctors.map((doctor) => <DoctorCard key={doctor.id} doctor={doctor} />)}
     </div>
-  )
-}
+  );
+};
 
-export default DoctorList
+export default DoctorList;

@@ -1,8 +1,9 @@
-import { useEffect, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import logo from "../../assets/images/logo.png";
 import userImg from "../../assets/images/avatar-icon.png";
 import { NavLink, Link } from "react-router-dom";
 import { BiMenu } from "react-icons/bi";
+import { AppContext } from "../../context/AppProvider";
 
 const navLinks = [
   {
@@ -28,6 +29,7 @@ const Header = () => {
   const headerRef = useRef(null);
   const menuRef = useRef(null);
 
+  const { user, setUser } = useContext(AppContext);
   const handleStickyHeader = () => {
     window.addEventListener("scroll", () => {
       if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
@@ -41,7 +43,7 @@ const Header = () => {
   useEffect(() => {
     handleStickyHeader();
 
-  return () => window.removeEventListener("scroll", handleStickyHeader);
+    return () => window.removeEventListener("scroll", handleStickyHeader);
   });
 
   const toggleMenu = () => menuRef.current.classList.toggle("show__menu");
@@ -53,13 +55,13 @@ const Header = () => {
           {/* ===== logo ===== */}
           <div className="">
             <Link to="/">
-            <img src={logo} alt="medicare logo" />
+              <img src={logo} alt="medicare logo" />
             </Link>
           </div>
 
           {/* ===== menu ===== */}
           <div className="navigation" ref={menuRef} onClick={toggleMenu}>
-            <ul className="menu flex items-center gap-[2.7rem]">
+            <ul className="menu flex flex-row items-center gap-[2.7rem]">
               {navLinks.map((link, index) => (
                 <li key={index}>
                   <NavLink
@@ -79,22 +81,28 @@ const Header = () => {
 
           {/* ===== nav right ===== */}
           <div className="flex items-center gap-4">
-             <div className="hidden">
+            {user ? <div >
               <Link to="/">
-                <figure className="w-[35px] h-[35px] rounded-full cursor-pointer">
-                  <img src={userImg} className="w-full rounded-full" alt="user"  />
+                <figure className='w-[50px] h-[50px] rounded-full border-2 border-solid border-primaryColor flex items-center justify-center'>
+                  <img src={user.photo} alt='' className='w-full rounded-full' />
                 </figure>
               </Link>
-             </div>
+            </div> : null}
 
-             <Link to='/login'>
+            {!user ? <Link to='/login'>
               <button className="bg-primaryColor py-2 px-6 text-white font-[600] h-[44px] flex items-center justify-center rounded-[40px]">
                 Login</button>
-             </Link>
+            </Link> : null}
 
-             <span className="md:hidden" onClick={toggleMenu}>
-              <BiMenu className="w-6 h-6 cursor-pointer"/>
-              </span>
+
+            {user ?
+              <button onClick={() => setUser(null)} className="bg-primaryColor py-2 px-6 text-white font-[600] h-[44px] flex items-center justify-center rounded-[40px]">
+                Logout</button>
+              : null}
+
+            <span className="md:hidden" onClick={toggleMenu}>
+              <BiMenu className="w-6 h-6 cursor-pointer" />
+            </span>
           </div>
         </div>
       </div>
