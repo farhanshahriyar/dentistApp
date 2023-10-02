@@ -1,6 +1,17 @@
+import { useState } from "react";
+import AppointmentModal from "./AppointmentModal";
 
 
 const SidePanel = () => {
+    let [isOpen, setIsOpen] = useState(false);
+
+    function closeModal() {
+        setIsOpen(false);
+    }
+
+    function openModal() {
+        setIsOpen(true);
+    }
     return (
         <div className="shadow-panelShadow p-3 lg:p-5 rounded-md">
             <div className="flex items-center justify-between">
@@ -27,9 +38,9 @@ const SidePanel = () => {
                     </li>
                 </ul>
             </div> */}
-            <button onClick={() => document.getElementById('my_modal_2').showModal()} className="btn px-2 w-full rounded-md">Book Appointment</button>
-
-            <dialog id="my_modal_2" className="modal">
+            <button onClick={openModal} className="btn px-2 w-full rounded-md">Book Appointment</button>
+            <AppointmentModal isOpen={isOpen} setIsOpen={setIsOpen} closeModal={closeModal} />
+            {/* <dialog id="my_modal_2" className="modal">
                 <div className="modal-box">
                     <div>
                         <h2> Select Appointment Time</h2>
@@ -39,7 +50,7 @@ const SidePanel = () => {
                 <form method="dialog" className="modal-backdrop">
                     <button>close</button>
                 </form>
-            </dialog>
+            </dialog> */}
         </div>
     );
 };

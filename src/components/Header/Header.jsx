@@ -4,6 +4,7 @@ import userImg from "../../assets/images/avatar-icon.png";
 import { NavLink, Link } from "react-router-dom";
 import { BiMenu } from "react-icons/bi";
 import { AppContext } from "../../context/AppProvider";
+import Notification from "../../pages/Doctors/Notification";
 
 const navLinks = [
   {
@@ -81,6 +82,7 @@ const Header = () => {
 
           {/* ===== nav right ===== */}
           <div className="flex items-center gap-4">
+            {user ? <Notification /> : null}
             {user ? <div >
               <Link to="/">
                 <figure className='w-[50px] h-[50px] rounded-full border-2 border-solid border-primaryColor flex items-center justify-center'>
@@ -103,6 +105,7 @@ const Header = () => {
             <span className="md:hidden" onClick={toggleMenu}>
               <BiMenu className="w-6 h-6 cursor-pointer" />
             </span>
+
           </div>
         </div>
       </div>

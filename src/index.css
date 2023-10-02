@@ -65,3 +65,21 @@
 }
     
 
+
+
+.my-selected:not([disabled]) { 
+    font-weight: bold; 
+    border: 2px solid currentColor;
+    background-color: blue;
+    color: white;
+  }
+  .my-selected:hover:not([disabled]) { 
+    border-color: blue;
+      background-color: blue;
+    color: blue;
+  }
+  .my-today { 
+    font-weight: bold;
+
+    color: red;
+  }
