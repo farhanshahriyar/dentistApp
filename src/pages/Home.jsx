@@ -35,8 +35,9 @@ const Home = () => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                   ut purus eget nunc ut dignissim cursus. Aliquam erat volutpat.{" "}
                 </p>
-
-                <button className="btn">Request an Appointment</button>
+                <Link to="/doctors">
+                <button className="btn" href="">Request an Appointment</button>
+                </Link>
               </div>
               {/* ===== hero counter ===== */}
               <div className="mt-[30px] lg:mt-[70px] flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-[30px]">

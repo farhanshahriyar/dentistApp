@@ -33,6 +33,7 @@ const Login = () => {
       const { data } = await axiosInstance.post('/api/v1/auth/login', { ...FormData });
       setUser(data.data);
       // localStorage.setItem('user', JSON.stringify(data.data));
+      toast.success('Login Successful');
     }
     catch (err) {
       setUser(null);

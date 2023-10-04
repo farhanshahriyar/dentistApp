@@ -52,6 +52,7 @@ const Signup = () => {
       const { data } = await axiosInstance.post('/api/v1/auth/register', { ...FormData, photo: img });
       setUser(data.data);
       localStorage.setItem('user', JSON.stringify(data.data));
+      toast.success('Registration Successful');
     }
     catch (err) {
       setUser(null);

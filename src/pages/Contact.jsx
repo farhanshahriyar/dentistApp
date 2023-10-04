@@ -1,5 +1,12 @@
 
+
 const Contact = () => {
+    const submitHandler = (e) => {
+        e.preventDefault();
+        alert("Your message has been sent successfully. We will get back to you soon.") 
+        
+    }
+
   return (
    <section className="">
       <div className="px-4 mx-auto max-w-screen-md">
@@ -24,7 +31,7 @@ const Contact = () => {
                   className="form__input mt-1" 
                   placeholder="Leave a comment...."></textarea>
               </div>
-              <button type="submit" className="btn rounded sm:w-fit">Submit</button>
+              <button onClick={submitHandler} type="submit" className="btn rounded sm:w-fit">Submit</button>
           </form>
       </div>
    </section>
