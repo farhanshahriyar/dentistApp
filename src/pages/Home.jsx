@@ -30,10 +30,7 @@ const Home = () => {
                   Enjoy The Beauty Of A Healthy Smile!
                 </h1>
                 <p className="text__para">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  ut purus eget nunc ut dignissim cursus. Aliquam erat volutpat.
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  ut purus eget nunc ut dignissim cursus. Aliquam erat volutpat.{" "}
+                Welcome to Medicare, where we believe that a healthy smile is the key to happiness and confidence. We are dedicated to providing exceptional health care and helping you achieve the beautiful smile you deserve.{" "}
                 </p>
                 <Link to="/doctors">
                 <button className="btn" href="">Request an Appointment</button>
@@ -109,8 +106,7 @@ const Home = () => {
                   Find a Doctor
                 </h3>
                 <p className="text__para text-[16px] leading-7 text-textColor font-[400] mt-4 text-center">
-                  World-class care for everyone. Our health System offers
-                  unmatched, expert health care. From the lab to the clinic.
+                Finding the right doctor is crucial for your healthcare needs. Ask for recommendations from trusted sources, check with your insurance provider for in-network doctors, or use online directories to search for doctors based on specialty, location, and patient reviews. Take into account factors like experience, credentials, and patient satisfaction when making your decision.
                 </p>
 
                 <Link
@@ -132,8 +128,7 @@ const Home = () => {
                   Find a Location
                 </h3>
                 <p className="text__para text-[16px] leading-7 text-textColor font-[400] mt-4 text-center">
-                  World-class care for everyone. Our health System offers
-                  unmatched, expert health care. From the lab to the clinic.
+                Once you've chosen a doctor, it's important to find their office location. You can typically find this information on their website or by contacting their clinic directly. Use online maps or navigation apps to get directions and plan your visit. Consider factors like proximity, accessibility, and parking options when choosing a location.
                 </p>
 
                 <Link
@@ -155,8 +150,7 @@ const Home = () => {
                   Book Appointment
                 </h3>
                 <p className="text__para text-[16px] leading-7 text-textColor font-[400] mt-4 text-center">
-                  World-class care for everyone. Our health System offers
-                  unmatched, expert health care. From the lab to the clinic.
+                Scheduling an appointment is easy. Call the doctor's office during business hours and speak to their staff to book an appointment. Alternatively, some doctors offer online appointment booking through their website or third-party platforms. Have your insurance information ready if applicable. Remember to mention any specific concerns or preferences when scheduling your appointment.
                 </p>
 
                 <Link

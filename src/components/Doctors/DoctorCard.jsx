@@ -1,4 +1,4 @@
-import starIcon from '../../assets/images/star.png';
+import starIcon from '../../assets/images/Star.png';
 import { Link } from 'react-router-dom';
 import { BiSolidArrowToRight, BiSolidChevronRight } from 'react-icons/bi';
 

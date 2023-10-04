@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useEffect } from 'react';
 
 const instance = axios.create({
-    baseURL: process.env.NODE_ENV === 'development' ? 'http://localhost:5000/' : '',
+    baseURL: process.env.NODE_ENV === 'development' ? 'http://localhost:5000/' : 'https://medicare-backend.vercel.app/',
 
 });
 
